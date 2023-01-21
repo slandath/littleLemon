@@ -1,3 +1,78 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +110,168 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+* {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Inter Tight", sans-serif;
+  font-family: "Markazi Text", serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.main-container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #edefee;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  color: #495e57;
+}
+
+.navbar-links li:hover {
+  background-color: #f4ce14;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #495e57;
+  border-radius: 10px;
+}
+
+.resform {
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #edefee;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  flex-shrink: 0;
+  bottom: 0;
+  position: static;
+}
+.footer-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.footer-links li {
+  list-style: none;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  color: #495e57;
+}
+
+@media (max-width: 400px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    width: 100%;
+    display: none;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}
+.header-container {
+  background-color: #495e57;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 400px;
+  padding: 3rem;
+}
+
+.hero-container {
+  margin: auto;
+}
+
+.hero-container h2 {
+  font-size: 48px;
+}
+
+.hero-container h3 {
+  font-size: 32px;
+}
+
+.header-image-container {
+  margin: auto;
+}
+.header-image-container img {
+  max-height: 300px;
+}
+.hero-container button {
+  padding: 0.75rem;
+  border-radius: 0.4rem;
+  border: 1px black;
+  color: #495e57;
+}
+.hero-container button:hover {
+  cursor: pointer;
+  background-color: #ee9972;
 }

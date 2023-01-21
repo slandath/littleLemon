@@ -3,16 +3,35 @@ import Logo from "./Logo.svg";
 
 const Nav = () => {
   return (
-    <nav>
-      <ul>
-        <img src={Logo} alt="logo"></img>
-        <li>Home</li>
-        <li>About</li>
-        <li>Menu</li>
-        <li>Reservations</li>
-        <li>Order Online</li>
-        <li>Login</li>
-      </ul>
+    <nav className="navbar">
+      <img src={Logo} alt="logo"></img>
+      <a href="#" className="toggle-button">
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </a>
+      <div className="navbar-links">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#menu">Menu</a>{" "}
+          </li>
+          <li>
+            <a href="#reserve">Reservations</a>
+          </li>
+          <li>
+            <a href="#order">Order Online</a>
+          </li>
+          <li>
+            <a href="#login">Login</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

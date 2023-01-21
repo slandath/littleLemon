@@ -1,6 +1,4 @@
-import React from "react";
-
-const Main = () => {
+const Main = (props) => {
   return <main>Main</main>;
 };
 

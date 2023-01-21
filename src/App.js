@@ -1,16 +1,20 @@
 import "./App.css";
 import Nav from "./Components/Nav";
-import Header from "./Components/Header";
-import Main from "./Components/Main";
+import Hero from "./Components/Header";
+import Highlights from "./Components/Main";
 import Footer from "./Components/Footer";
+import BookingPage from "./Components/BookingPage";
 
 function App() {
   return (
     <>
-      <Nav />
-      <Header />
-      <Main />
-      <Footer />
+      <div className="main-container">
+        <Nav />
+        <Hero />
+        <Highlights />
+        <BookingPage />
+        <Footer />
+      </div>
     </>
   );
 }
