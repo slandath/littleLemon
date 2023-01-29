@@ -2,7 +2,6 @@ import { useRef } from "react";
 
 const BookingForm = () => {
   const restimeRef = useRef("");
-  const resdateRef = useRef("");
   const resguestRef = useRef("");
   const resoccasionRef = useRef("");
 
@@ -17,14 +16,7 @@ const BookingForm = () => {
   return (
     <>
       <form className="resform" onSubmit={formHandler}>
-        <label htmlFor="res-date">Choose Date</label>
-        <input
-          name="resdate"
-          type="date"
-          id="res-date"
-          ref={resdateRef}
-        ></input>
-        <label htmlFor="res-time">Choose Time</label>
+        <label htmlFor="res-time">Available Times</label>
         <select id="res-time" ref={restimeRef} name="restime">
           {availableTimes.map((time, index) => {
             return <option key={index}>{time}</option>;

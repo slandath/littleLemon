@@ -121,9 +121,10 @@ select {
 
 body {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1300px;
 }
 
+/* Sticky Footer */
 .main-container {
   min-height: 100vh;
   min-height: 100dvh;
@@ -192,9 +193,6 @@ body {
   background-color: #edefee;
   padding-left: 3rem;
   padding-right: 3rem;
-  flex-shrink: 0;
-  bottom: 0;
-  position: static;
 }
 .footer-links ul {
   margin: 0;
@@ -241,37 +239,115 @@ body {
 .header-container {
   background-color: #495e57;
   color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   height: 400px;
   padding: 3rem;
 }
 
-.hero-container {
-  margin: auto;
+.hero-container button {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px black;
+  color: #495e57;
+  background-color: #f4ce14;
+  font-weight: 700;
 }
-
-.hero-container h2 {
-  font-size: 48px;
-}
-
-.hero-container h3 {
-  font-size: 32px;
+.hero-container button:hover {
+  cursor: pointer;
+  background-color: #ee9972;
 }
 
 .header-image-container {
   margin: auto;
 }
 .header-image-container img {
-  max-height: 300px;
+  height: 20rem;
+  width: 20rem;
+  object-fit: contain;
 }
-.hero-container button {
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.booking-container input {
+  max-width: 9.375rem;
+  max-height: 3.125rem;
+}
+.card-container {
+  display: block;
+  background-color: #edefee;
+  max-width: 15rem;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.card-container img {
+  min-height: 12.5rem;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.card-container h4,
+h3,
+p {
+  margin: 1rem;
+}
+
+.card-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.order-btn {
   padding: 0.75rem;
-  border-radius: 0.4rem;
+  border-radius: 0.75rem;
   border: 1px black;
   color: #495e57;
+  background-color: #f4ce14;
+  font-weight: 700;
 }
-.hero-container button:hover {
+.order-btn:hover {
+  cursor: pointer;
+  background-color: #ee9972;
+}
+
+.dish-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem;
+  border-radius: 0.75rem;
+}
+
+.specials-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.specials-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.specials-header-container button {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px black;
+  color: #495e57;
+  background-color: #f4ce14;
+  font-weight: 700;
+}
+.specials-header-container button:hover {
   cursor: pointer;
   background-color: #ee9972;
 }

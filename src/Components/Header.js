@@ -1,5 +1,5 @@
 import React from "react";
-import restaurant from "../assets/restaurant.jpg";
+import restauranfood from "../assets/restauranfood.jpg";
 
 const Hero = () => {
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
         <button>Book a Table</button>
       </div>
       <div className="header-image-container">
-        <img src={restaurant} alt="restaurant"></img>
+        <img src={restauranfood} alt="restaurant"></img>
       </div>
     </header>
   );

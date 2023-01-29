@@ -1,7 +1,7 @@
 import "./App.css";
 import Nav from "./Components/Nav";
 import Hero from "./Components/Header";
-import Highlights from "./Components/Main";
+import Main from "./Components/Main";
 import Footer from "./Components/Footer";
 import BookingPage from "./Components/BookingPage";
 
@@ -11,7 +11,7 @@ function App() {
       <div className="main-container">
         <Nav />
         <Hero />
-        <Highlights />
+        <Main />
         <BookingPage />
         <Footer />
       </div>
