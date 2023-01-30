@@ -6,7 +6,7 @@ const Card = (props) => {
       <h4 className="card-price">${props.price}</h4>
       <p className="card-body">{props.description}</p>
       <div className="card-btn-container">
-        <button className="order-btn">Order a deliver</button>
+        <button className="order-btn">Order a delivery</button>
       </div>
     </div>
   );
