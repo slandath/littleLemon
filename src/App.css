@@ -199,15 +199,38 @@ body {
 }
 
 .booking-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid black;
-  margin: 0 auto;
+  background-color: #495e57;
+  color: #f4ce14;
+  display: flex;
+  flex-direction: column;
 }
 .booking-container input {
   max-width: 9.375rem;
   max-height: 3.125rem;
 }
+
+.booking-container h1 {
+  text-align: center;
+}
+
+.booking-container button {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #495e57;
+  color: #495e57;
+  background-color: #f4ce14;
+  font-weight: 700;
+  width: 100%;
+}
+.booking-container button:hover {
+  cursor: pointer;
+  background-color: #ee9972;
+}
+.booking-form-container {
+  display: flex;
+  justify-content: center;
+}
+
 .card-container {
   width: 15.625rem;
   border-top-left-radius: 0.75rem;

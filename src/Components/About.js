@@ -2,7 +2,7 @@ import marioadrian from "../assets/marioadrian.jpg";
 
 const About = () => {
   return (
-    <section className="about-section-container">
+    <section className="about-section-container" id="about">
       <div className="about-container">
         <h1>Little Lemon</h1>
         <h3>Chicago</h3>

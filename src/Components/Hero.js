@@ -2,7 +2,7 @@ import restauranfoodsquare from "../assets/restauranfoodsquare.jpg";
 
 const Hero = () => {
   return (
-    <section className="hero-section-container">
+    <section className="hero-section-container" id="hero">
       <div className="hero-container">
         <h1>Little Lemon</h1>
         <h3>Chicago</h3>

@@ -1,27 +1,17 @@
-import { useState } from "react";
 import BookingForm from "./BookingForm";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
-const BookingPage = () => {
-  const [resdate, setResdate] = useState("");
-
-  const changeHandler = (e) => {
-    setResdate(e.target.value);
-  };
-
+const BookingPage = (props) => {
   return (
     <>
+      <Nav />
       <div className="booking-container">
-        <h3>Please choose the date for your reservation</h3>
-        <label htmlFor="res-date"></label>
-        <input
-          name="resdate"
-          type="date"
-          id="res-date"
-          onChange={changeHandler}
-          value={resdate}
-        ></input>
+        <h1>Please choose the date for your reservation</h1>
+        <br />
         <BookingForm />;
       </div>
+      <Footer />
     </>
   );
 };
