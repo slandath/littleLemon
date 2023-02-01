@@ -18,7 +18,7 @@ const Nav = () => {
       <div className="navbar-links">
         <ul>
           <li>
-            <a href="#" onClick={goHome}>
+            <a href="" onClick={goHome}>
               Home
             </a>
           </li>
@@ -29,7 +29,7 @@ const Nav = () => {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#reserve" onClick={goReserve}>
+            <a href="" onClick={goReserve}>
               Reservations
             </a>
           </li>

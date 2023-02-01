@@ -1,79 +1,57 @@
-import { useState } from "react";
-
-const BookingForm = () => {
-  const [resdate, setResdate] = useState("");
-  const [resguest, setResguest] = useState("");
-  const [restime, setRestime] = useState("");
-  const [resoccasion, setResoccasion] = useState("");
-
+const BookingForm = (props) => {
   const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
   const occasions = ["Birthday", "Anniversary", "Other"];
-
-  const dateChangeHandler = (e) => {
-    setResdate(e.target.value);
-  };
-  const guestChangeHandler = (e) => {
-    setResguest(e.target.value);
-  };
-  const timeChangeHandler = (e) => {
-    setRestime(e.target.value);
-  };
-  const occasionChangeHandler = (e) => {
-    setResoccasion(e.target.value);
-  };
-
-  function formHandler(e) {
-    e.prevent.default();
-    alert("Booked!");
-  }
 
   return (
     <>
       <div className="booking-form-container">
-        <form className="resform" onSubmit={formHandler}>
-          <label htmlFor="res-date">Date</label>
+        <form className="resform" onSubmit={props.formHandler}>
           <input
+            label="Reservation Date"
             name="resdate"
             type="date"
             id="res-date"
-            onChange={dateChangeHandler}
-            value={resdate}
+            onChange={props.dateChangeHandler}
+            value={props.resdate}
           ></input>
 
-          <label htmlFor="res-time">Available Times</label>
           <select
+            label="res-time"
             id="res-time"
-            onChange={timeChangeHandler}
+            onChange={props.timeChangeHandler}
+            type="time"
             name="restime"
-            value={restime}
+            value={props.restime}
           >
             {availableTimes.map((time, index) => {
               return <option key={index}>{time}</option>;
             })}
           </select>
 
-          <label htmlFor="guests">Number of Guests</label>
           <input
+            label="Number of Guests"
             name="resguest"
             type="number"
             placeholder="1"
             min="1"
             max="10"
             id="guests"
-            onChange={guestChangeHandler}
-            value={resguest}
+            onChange={props.guestChangeHandler}
+            value={props.resguest}
           ></input>
-          <label htmlFor="occasion">Occasion</label>
+
           <select
+            label="Occasion"
             id="occasion"
             name="resoccasion"
-            onChange={occasionChangeHandler}
-            value={resoccasion}
+            onChange={props.occasionChangeHandler}
+            value={props.resoccasion}
           >
             {occasions.map((occasion, index) => {
               return <option key={index}>{occasion}</option>;
             })}
           </select>
+
           <button type="submit">Make Your Reservation</button>
         </form>
       </div>
