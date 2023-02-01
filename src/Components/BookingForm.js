@@ -10,18 +10,20 @@ const BookingForm = (props) => {
             label="Reservation Date"
             name="resdate"
             type="date"
-            id="res-date"
+            id="resdate"
             onChange={props.dateChangeHandler}
             value={props.resdate}
+            required
           ></input>
 
           <select
             label="res-time"
-            id="res-time"
+            id="restime"
             onChange={props.timeChangeHandler}
             type="time"
             name="restime"
             value={props.restime}
+            required
           >
             {availableTimes.map((time, index) => {
               return <option key={index}>{time}</option>;
@@ -38,6 +40,7 @@ const BookingForm = (props) => {
             id="guests"
             onChange={props.guestChangeHandler}
             value={props.resguest}
+            required
           ></input>
 
           <select
@@ -46,6 +49,7 @@ const BookingForm = (props) => {
             name="resoccasion"
             onChange={props.occasionChangeHandler}
             value={props.resoccasion}
+            required
           >
             {occasions.map((occasion, index) => {
               return <option key={index}>{occasion}</option>;
