@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
-import App from "./App";
+import Main from "./Components/Main";
 
 test("renders the landing page", () => {
-  render(<App />);
+  render(<Main />);
 });
