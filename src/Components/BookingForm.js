@@ -5,6 +5,7 @@ const BookingForm = (props) => {
   return (
     <>
       <div className="booking-form-container">
+        <h1>Please choose the date for your reservation</h1>
         <form className="resform" onSubmit={props.formHandler}>
           <input
             label="Reservation Date"
